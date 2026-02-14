@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Valentine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hearts">
+            <span>❤️</span>
+            <span>💖</span>
+            <span>🌟</span>
+            <span>💕</span>
+            <span>⭐</span>
+        </div>
+        <h1 id="question">Veux-tu être ma Valentine ?</h1>
+        <div class="buttons">
+            <button id="yes-btn">Oui</button>
+            <button id="no-btn">Non</button>
+        </div>
+        <div class="message" id="message"></div>
+        <!-- Formulaire de mail caché initialement -->
+        <div class="mail-form" id="mail-form" style="display: none;">
+            <p>Félicitations ! Envoie-moi ta réponse par mail pour confirmer :</p>
+            <form action="mailto:boucherthomasent@gmail.com" method="post" enctype="text/plain">
+                <input type="hidden" name="subject" value="Réponse à ma demande de Valentine">
+                <textarea name="body" id="mail-body" readonly style="display: none;"></textarea>
+                <button type="submit">Envoyer par mail</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Palette romantique : rose pastel, rouge doux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #ffb3ba); /* Rose pastel et rouge doux */
+    color: #d63384; /* Rouge romantique */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.hearts span {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s infinite ease-in-out;
+}
+
+.hearts span:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.hearts span:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+.hearts span:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+.hearts span:nth-child(4) { top: 50%; right: 10%; animation-delay: 3s; }
+.hearts span:nth-child(5) { bottom: 10%; left: 50%; animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition générale pour scale, opacity, etc. */
+    background: #ff69b4; /* Rose vif */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #d63384; /* Rouge plus foncé */
+}
+
+#no-btn {
+    transition: all 0.5s ease; /* Pour les mouvements et changements de taille/opacité */
+}
+
+.message {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.mail-form {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.mail-form p {
+    margin-bottom: 1rem;
+}
+
+.mail-form button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive pour téléphone */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .mail-form {
+        font-size: 1rem;
+    }
+}
